@@ -1,8 +1,9 @@
 import React from "react";
+import "./PlayerCard.css";
 
 const PlayerCard = ({ name, country }) => {
   return (
-    <div>
+    <div className="card-container">
       <h3>{name}</h3>
       <p>{country}</p>
     </div>
