@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar" data-testid="navbar">
       <div className="logo">
         <h1>Player List</h1>
       </div>

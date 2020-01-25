@@ -4,7 +4,7 @@ import "./PlayerList.css";
 
 const PlayerList = ({ players }) => {
   return (
-    <div className="player-container">
+    <div className="player-container" data-testid="player-container">
       {players.map(e => {
         return <PlayerCard name={e.name} country={e.country} key={e.id} />;
       })}
