@@ -25,6 +25,10 @@ class App extends Component {
     return (
       <div>
         <Navbar />
+        <PlayerList
+          name={this.state.playerArray.name}
+          country={this.state.playerArray.country}
+        />
       </div>
     );
   }
