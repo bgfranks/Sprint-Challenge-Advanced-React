@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Navbar from "./Components/Navbar";
+import PlayerList from "./Components/PlayerList";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    playerArray: [],
+  };
+
+  componentDidMount() {
+    fetch("http://localhost:5000/api/players")
+      .then(res => res.json())
+      .then(players => {
+        console.log(players);
+        this.setState({ ...this.state, playerArray: players });
+        // console.log(user.login)
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <PlayerList players={this.state.playerArray} />
+      </div>
+    );
+  }
 }
 
 export default App;
