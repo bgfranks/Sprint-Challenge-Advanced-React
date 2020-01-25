@@ -23,9 +23,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+
+You will use a class component when you need to handle state and need more control over the react life cycle methods. Where functional components tend to lean towards stateless/dumb components.
+
 - [ ] Name three lifecycle methods and their purposes.
+
+componentDidMount - this will imediately set the state when the component mounts (useful for setting initial state).
+componentDidUpdate - this is called imediately after the component updates (state changes)
+componentWillUnmount - used to handle any clean up before unmounting and destroying the component. After being unmounted, the component will never be re-rendered.
+
 - [ ] What is the purpose of a custom hook?
+
+They are an easy way to share stateful and side-effectful functionality across components. Can be made its is on file and imported to different components where needed.
+
 - [ ] Why is it important to test our apps?
+
+It is useful for future proofing for yourself and other devs that may come behind. It allows devs to see at a glance how the functions and methods should work. Making it easier for future you or a new dev to unstand the logic.
 
 ## Project Set Up
 
@@ -44,7 +57,7 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request.
 - [ ] PM then will count the HW as done by merging the branch back into master.
 
